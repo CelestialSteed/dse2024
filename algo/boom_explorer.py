@@ -19,3 +19,6 @@ def boom_explorer(configs: dict) -> NoReturn:
 		solver.fit_time_reg(verbose=False)	# time
 		solver.eipv_suggest()
 	solver.report()
+	time_score = solver.time_score()
+	hv = 1
+	print("得分：",hv*time_score)

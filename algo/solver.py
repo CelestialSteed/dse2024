@@ -116,6 +116,11 @@ class BOOMExplorerSolver(object):
             0
         )
 
+    def time_score(self):
+        alpha = 6
+        theta = 2625000
+        return alpha - (torch.sum(self.visited_time).item() - theta) / theta
+
     def report(self):
         gt = get_pareto_frontier(self.problem.total_y, reverse=False)
         pred = get_pareto_frontier(self.visited_y, reverse=False)
