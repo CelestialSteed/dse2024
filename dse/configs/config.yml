@@ -1,0 +1,6 @@
+# config设置: 数据路径、模型超参数等
+
+# dataset
+dataset:
+  path: dataset/demo.csv
+
